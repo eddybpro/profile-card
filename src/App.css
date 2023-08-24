@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-site-1: hsl(185, 75%, 39%);
+  --color-site-2: hsl(270, 33%, 99%);
+  --color-brand-1: hsl(229, 23%, 23%);
+  --color-brand-2: hsl(227, 10%, 46%);
+  --color-brand-1-c: hsl(0, 0%, 59%);
+  --font-kumbh: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  font-family: var(--font-kumbh);
+  background: url("./assets/bg-pattern-top.svg"),
+    url("./assets/bg-pattern-bottom.svg");
+  background-position: top -20rem left -22rem, bottom -20rem right -22rem;
+  background-repeat: no-repeat, no-repeat;
+  background-size: 120%, 120%;
+  background-color: var(--color-site-1);
+  display: grid;
+  place-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  #root {
+    background: url("./assets/bg-pattern-top.svg"),
+      url("./assets/bg-pattern-bottom.svg");
+    background-position: top -55rem left -12rem, bottom -55rem right -12rem;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 60%, 60%;
+    background-color: var(--color-site-1);
+  }
+}
+
+main {
+  width: 90%;
+  max-width: 35rem;
+  background-color: var(--color-site-2);
+  border-radius: 2rem;
+}
+
+.ImgContainer {
+  background: url("./assets/bg-pattern-card.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-site-1);
+  height: 15rem;
+  position: relative;
+  border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+
+.ImgContainer-ImgBox {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  transform: translate(-50%, -15%);
+  width: 12rem;
+  height: 12rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--color-site-2);
+}
+
+.ImgContainer-ImgBox > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.TxtContainer {
+  margin-top: 7rem;
+  text-align: center;
+}
+
+.TxtContainer-UserName {
+  color: var(--color-brand-1);
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+.TxtContainer-UserName > span {
+  color: var(--color-brand-2);
+  font-weight: 400;
+}
+
+.TxtContainer-Location {
+  font-size: 1.9rem;
+  text-transform: capitalize;
+  color: var(--color-brand-2);
+  margin-bottom: 2rem;
+}
+
+.TxtContainer-Line {
+  width: 100%;
+  height: 0.1rem;
+  margin-bottom: 2rem;
+  background-color: var(--color-brand-1-c);
+}
+
+.TxtContainer-Status {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 2rem 2rem 2rem;
+}
+
+.TxtContainer-Status-ValBox > strong {
+  color: var(--color-brand-1);
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.TxtContainer-Status-ValBox > p {
+  font-size: 1.6rem;
+  color: var(--color-brand-2);
+  text-transform: capitalize;
+}
